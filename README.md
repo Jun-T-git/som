@@ -12,10 +12,9 @@ Self Organizing Map（自己組織化マップ）はT.Kohonenによって開発�
 # Description
 アルゴリズムは以下の通りである．
 1. マッピング用の2次元色配列をランダムに与える．<br><img src="https://user-images.githubusercontent.com/64676197/107116802-2261b800-68b9-11eb-872c-4544068f150f.png" width="300px">
-2. 3以降を繰り返す．
-3. 全入力に対して4を行う．
-4. 1の配列のうち，入力の色に最も近い要素とその周囲の要素に入力の色を加える．<br><img src="https://user-images.githubusercontent.com/64676197/107116809-2d1c4d00-68b9-11eb-8802-07ac7720f1ae.png" width="300px">
-5. 色を変更する範囲と度合いを小さくする
+2. 1の配列のうち，各入力の色に最も近い要素とその周囲の要素に入力の色を加える．<br><img src="https://user-images.githubusercontent.com/64676197/107116809-2d1c4d00-68b9-11eb-8802-07ac7720f1ae.png" width="300px">
+3. 色を変更する範囲と度合いを小さくする
+4. 2,3を繰り返す．
 <br>
 実行すると以下のようになる．
 
