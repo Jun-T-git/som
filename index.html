@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Let's Enjoy SOM !</title>
+	</head>
+
+	<body id="bodyId">
+        <header>
+            <h1>Let's Enjoy SOM !</h1>
+            <hr>
+        </header>
+        
+        <canvas id="somcanvas" width="800" height="700"></canvas>
+        
+        <div id="rightbox">
+
+            <div id="data">
+                Panel Size <input type="number" value="30" max="30" min="3" id="size"><br>
+                Input Size <input type="number" value="30" max="30" min="3" id="input_size"><br>
+                Neighbor <input type="number" value="14" max="30" min="1" id="neighbornum"><br>
+                Input[<input type="number" value="1" max="30" min="1" id="input_index">](
+                R: <input type="number" value="0" max="255" min="0" id="R">, 
+                G: <input type="number" value="0" max="255" min="0" id="G">, 
+                B: <input type="number" value="0" max="255" min="0" id="B"> )<br>
+                Test(
+                R: <input type="number" value="90" max="255" min="0" id="testR">, 
+                G: <input type="number" value="180" max="255" min="0" id="testG">, 
+                B: <input type="number" value="180" max="255" min="0" id="testB"> )
+                <br>
+                 >> <span id="result">none</span><br>
+            
+                Accuracy = <span id="accuracy">none</span><br>
+                Step = <span id="step">0</span><br>
+                Learning Rate = <span id="lr">0</span><br> 
+                Neighbor = <span id="neighbor">0</span><br> 
+            </div>
+            
+            <div id="buttons">
+                <input type="button" value="start" id="startButton" class="button"><br>
+                <input type="button" value="stop" id="stopButton" class="button"><br>
+                <input type="button" value="next" id="nextButton" class="button"><br>
+                <input type="button" value="test" id="testButton" class="button"><br>
+                <input type="button" value="reset panel" id="resetPanelButton" class="button"><br>
+                <input type="button" value="reset" id="resetButton" class="button"><br>
+            </div>
+
+        </div>
+		
+		<script type="text/javascript" src="script.js"></script>
+		
+	</body>
+</html>
