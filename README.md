@@ -1,5 +1,5 @@
 # SOMeL
-Self Organizing Map e-Learningの頭文字からなるSOMeL(染める)．
+Self Organizing Map e-Learningの頭文字をとったSOMeL(染める)．
 
 機械学習手法の一つであるSOM（自己組織化マップ）を直感的に理解するためのデモプログラムである．
 
