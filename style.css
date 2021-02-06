@@ -5,11 +5,6 @@ header{
 body{
     background-color: #EEEEF0;
 }
-title{
-    position: absolute;
-    left: 10px;
-    right: 10px;
-}
 canvas{
     background-color: #FFFFFF;
     border: solid 1px #777777;
@@ -49,4 +44,11 @@ canvas{
 .button:hover {
     opacity: 0.8;
 }
-
+.icon{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.icon_color{
+    color: #333333;
+}
