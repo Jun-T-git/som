@@ -200,7 +200,7 @@ function dist3Dmin(panelObj1,panelObj2){
 
 // 近傍関数
 function neighborFunc(dist){
-    if (dist/SIZE > Math.max(neighbor-t/2, 1)){
+    if (dist/SIZE > Math.max(neighbor, 1)){
         return 0;
     }
     else{
@@ -223,11 +223,11 @@ function do_test(){
     }
     paintBorder(panel[test_like_index],"rgb("+test.r+","+test.g+","+test.b+")");
     if(nearest_color==pred_nearest_color){
-        resultElement.innerHTML = "pred : " + COLOR[pred_nearest_color].name + ", Truth : " + COLOR[nearest_color].name + " [ ○ ]";
+        resultElement.innerHTML = "Pred : " + COLOR[pred_nearest_color].name + ", Truth : " + COLOR[nearest_color].name + " [ ○ ]";
         return 1;
     }
     else{
-        resultElement.innerHTML = "pred : " + COLOR[pred_nearest_color].name + ", Truth : " + COLOR[nearest_color].name + " [ x ]";
+        resultElement.innerHTML = "Pred : " + COLOR[pred_nearest_color].name + ", Truth : " + COLOR[nearest_color].name + " [ x ]";
         return 0;
     }
 }
@@ -269,7 +269,8 @@ function som(){
         tElement.innerHTML = t;
         learningRate = 1 / t
         lrElement.innerHTML = Math.round(learningRate*1000000)/1000000;
-        nElement.innerHTML = neighbor;
+        neighbor = neighbor-0.5;
+        nElement.innerHTML = Math.max(neighbor, 1);
     }
 }
 
