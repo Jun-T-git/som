@@ -30,4 +30,4 @@ SOMeLでは，SOMによって色配列を3次元（RGB）から2次元（位置�
  - **test**...入力のうちTestとRGB距離が最も近い色（Truth）と平面上の距離が最も近い色（Pred）が一致しているかを確かめ，正解率を算出する．
  - **reset panel**...マッピング用2次元色配列をリセット．
  - **reset**...マッピング用2次元色配列と入力をリセット．
-<img src="https://user-images.githubusercontent.com/64676197/107116814-34435b00-68b9-11eb-8b97-e060c98e1ed9.png" width="360px">
+<img src="https://user-images.githubusercontent.com/64676197/107134181-14e91400-6933-11eb-80e8-c84465c8efd5.png" width="360px">
