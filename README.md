@@ -27,7 +27,7 @@ SOMeLでは，SOMによって色配列を3次元（RGB）から2次元（位置�
 ### Parameters
  - **Panel Size**...マッピング用平面のサイズ（1辺のパネル数）．
  - **Input Size**...入力色数．
- - **Neighbor**...色の変更範囲の初期値．
+ - **Neighbor(Init)**...色の変更範囲の初期値．
  - **Input**...入力色（並べ替えたい色）．RGBで指定可能．
  - **Test**...テスト用の色．RGBで指定可能．
   - **Pred**...入力色配列のうち，Testと最も平面上の距離が近い色．
@@ -35,6 +35,7 @@ SOMeLでは，SOMによって色配列を3次元（RGB）から2次元（位置�
  - **Accuracy**...Testをランダムに与えながら1,000回行ったとき，Pred=Truthとなった割合．
  - **Step**...回数．
  - **Learning Rate**...学習率（色をどれだけ変更するか）．
+ - **Neighbor**...色の変更範囲．
  
 ### Buttons
  - **start**...SOMを実行．
