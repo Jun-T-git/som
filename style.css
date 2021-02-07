@@ -3,6 +3,7 @@ header{
 }
 header h1{
     font-family: 'Roboto Condensed', sans-serif;
+    font-size: 40px;
 }
 body{
     background-color: #EEEEF0;
@@ -48,8 +49,8 @@ canvas{
 }
 .icon{
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 20px;
+    top: 25px;
 }
 .icon_color{
     color: #333333;
