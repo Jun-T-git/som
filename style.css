@@ -1,9 +1,13 @@
+body{
+    margin: 0;
+}
 header{
     padding: 0px 10px;
 }
 header h1{
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 40px;
+    letter-spacing: 2px;
 }
 body{
     background-color: #EEEEF0;
@@ -55,3 +59,26 @@ canvas{
 .icon_color{
     color: #333333;
 }
+#main{
+    overflow:hidden;
+}
+footer{
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #777777;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+footer ul li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+footer ul li a {
+    color: #FFFFFF;
+    font-size: 18px;
+    text-decoration: none;
+}
+

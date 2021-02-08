@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width">
-		<meta name="twitter:card" content="summary" />
-		<meta property="og:url" content="https://jun-t-git.github.io/som/" />
-		<meta property="og:title" content="SOMeL" />
-		<meta property="og:description" content="SOM（自己組織化マップ）を直感的に理解するためのwebサイト．3次元の色からなる配列を2次元にマッピングします．" />
-		<meta property="og:image" content="https://jun-t-git.github.io/som/image/thumb.png" />
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700" rel="stylesheet">
-		<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-		<link rel="apple-touch-icon" type="image/png" href="image/favicons/apple-touch-icon-180x180.png">
-		<link rel="icon" type="image/png" href="image/favicons//icon-192x192.png">
-		<title>SOMeL</title>
-	</head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="twitter:card" content="summary" />
+        <meta property="og:url" content="https://jun-t-git.github.io/som/" />
+        <meta property="og:title" content="SOMeL" />
+        <meta property="og:description" content="SOM（自己組織化マップ）のデモです．3次元の色からなる配列を2次元にマッピングします．" />
+        <meta property="og:image" content="https://jun-t-git.github.io/som/image/thumb.png" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700" rel="stylesheet">
+        <!-- githubアイコン用 -->
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        <!-- favicon -->
+        <link rel="apple-touch-icon" type="image/png" href="image/favicons/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" href="image/favicons//icon-192x192.png">
+        <title>SOMeL</title>
+    </head>
 
 	<body id="bodyId">
         <header>
@@ -22,51 +24,56 @@
             <div class="icon">
                 <a href="https://github.com/Jun-T-git/som"
                     target="_blank"
-		    rel="noopener noreferrer"
+                    rel="noopener noreferrer"
                     title="GitHubページを開く">
                     <span class="fab fa-3x fa-github-square icon_color"></span>
-                </a> 
+                </a>
             </div>
             <hr>
         </header>
-        
-        <canvas id="somcanvas" width="780" height="700"></canvas>
-        
-        <div id="rightbox">
 
-            <div id="data">
-                Panel Size <input type="number" value="30" max="30" min="3" id="size"><br>
-                Input Size <input type="number" value="30" max="30" min="3" id="input_size"><br>
-                Neighbor(Init) <input type="number" value="14" max="30" min="1" id="neighbornum"><br>
-                Input[<input type="number" value="1" max="30" min="1" id="input_index">](
-                R: <input type="number" value="0" max="255" min="0" id="R">, 
-                G: <input type="number" value="0" max="255" min="0" id="G">, 
-                B: <input type="number" value="0" max="255" min="0" id="B"> )<br>
-                Test(
-                R: <input type="number" value="90" max="255" min="0" id="testR">, 
-                G: <input type="number" value="180" max="255" min="0" id="testG">, 
-                B: <input type="number" value="180" max="255" min="0" id="testB"> )
-                <br>
-                 >> <span id="result">none</span><br>
-            
-                Accuracy = <span id="accuracy">none</span><br>
-                Step = <span id="step">0</span><br>
-                Learning Rate = <span id="lr">0</span><br> 
-                Neighbor = <span id="neighbor">0</span><br> 
+        <div id="main">
+            <canvas id="somcanvas" width="800" height="700"></canvas>
+            <div id="rightbox">
+                <div id="data">
+                    Panel Size <input type="number" value="30" max="30" min="3" id="size"><br>
+                    Input Size <input type="number" value="30" max="30" min="3" id="input_size"><br>
+                    Neighbor(Init) <input type="number" value="14" max="30" min="1" id="neighbornum"><br>
+                    Input[<input type="number" value="1" max="30" min="1" id="input_index">](
+                    R: <input type="number" value="0" max="255" min="0" id="R">, 
+                    G: <input type="number" value="0" max="255" min="0" id="G">, 
+                    B: <input type="number" value="0" max="255" min="0" id="B"> )<br>
+                    Test(
+                    R: <input type="number" value="90" max="255" min="0" id="testR">, 
+                    G: <input type="number" value="180" max="255" min="0" id="testG">, 
+                    B: <input type="number" value="180" max="255" min="0" id="testB"> )
+                    <br>
+                    >> <span id="result">none</span><br>
+                
+                    Accuracy = <span id="accuracy">none</span><br>
+                    Step = <span id="step">0</span><br>
+                    Learning Rate = <span id="lr">0</span><br> 
+                    Neighbor = <span id="neighbor">0</span><br> 
+                </div>
+                
+                <div id="buttons">
+                    <input type="button" value="start" id="startButton" class="button"><br>
+                    <input type="button" value="stop" id="stopButton" class="button"><br>
+                    <input type="button" value="next" id="nextButton" class="button"><br>
+                    <input type="button" value="test" id="testButton" class="button"><br>
+                    <input type="button" value="reset panel" id="resetPanelButton" class="button"><br>
+                    <input type="button" value="reset" id="resetButton" class="button"><br>
+                </div>
             </div>
-            
-            <div id="buttons">
-                <input type="button" value="start" id="startButton" class="button"><br>
-                <input type="button" value="stop" id="stopButton" class="button"><br>
-                <input type="button" value="next" id="nextButton" class="button"><br>
-                <input type="button" value="test" id="testButton" class="button"><br>
-                <input type="button" value="reset panel" id="resetPanelButton" class="button"><br>
-                <input type="button" value="reset" id="resetButton" class="button"><br>
-            </div>
-
         </div>
-		
-		<script type="text/javascript" src="script.js"></script>
+        <footer>
+            <ul>
+                <li><a href="https://jun-t-git.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
+                <li><a href="https://github.com/Jun-T-git/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="https://qiita.com/Jun-T" target="_blank" rel="noopener noreferrer">Qiita</a></li>
+            </ul>
+        </footer>
+	    <script type="text/javascript" src="script.js"></script>
 		
 	</body>
 </html>
