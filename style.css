@@ -29,13 +29,6 @@ header h1{
     border: solid 1px #777777;
     margin: 10px auto;
     width: 55%;
-/*     height: auto; */
-    min-width: 380px;
-    &:before {
-       content: "";
-       display: block;
-       padding-top: 75%;
-    }
 }
 #rightbox{
     width: 40%;
