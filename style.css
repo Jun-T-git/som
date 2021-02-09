@@ -19,6 +19,7 @@ header h1{
     color: #333333;
 }
 #main{
+    box-sizing: border-box;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
