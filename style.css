@@ -29,9 +29,8 @@ header h1{
     border: solid 1px #777777;
     margin: 10px auto;
     width: 55%;
-/*     height: auto; */
+    height: auto;
     min-width: 350px;
-/*     min-height: 350px; */
 }
 #rightbox{
     width: 40%;
@@ -42,8 +41,8 @@ header h1{
     flex-wrap: wrap;
 }
 #data{
-    width: 100%;
     box-sizing: border-box;
+    width: 100%;
     margin : 0 auto;
     padding: 20px;
     background-color: #FFFFFF;
@@ -56,7 +55,6 @@ header h1{
     flex-wrap: wrap;
 }
 .button {
-    /* display: inline-block; */
     text-align: center;
     background-image: linear-gradient(#eaeaea 0%, #c6c6c6 100%);
     box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
