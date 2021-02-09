@@ -31,7 +31,7 @@ header h1{
     width: 55%;
     height: auto;
     min-width: 400px;
-/*     min-height: 400px; */
+    min-height: 350px;
 }
 #rightbox{
     width: 40%;
