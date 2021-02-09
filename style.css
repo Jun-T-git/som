@@ -29,13 +29,13 @@ header h1{
     border: solid 1px #777777;
     margin: 10px auto;
     width: 55%;
-    height: auto;
-    min-width: 300px;
-    min-height: 350px;
+/*     height: auto; */
+    min-width: 350px;
+/*     min-height: 350px; */
 }
 #rightbox{
     width: 40%;
-    min-width: 300px;
+    min-width: 350px;
     margin: 10px auto;
     display: flex;
     flex-direction: column;
