@@ -30,7 +30,7 @@ header h1{
     margin: 10px auto;
     width: 55%;
 /*     height: auto; */
-    min-width: 370px;
+    min-width: 380px;
     &:before {
        content: "";
        display: block;
@@ -39,7 +39,7 @@ header h1{
 }
 #rightbox{
     width: 40%;
-    min-width: 370px;
+    min-width: 380px;
     margin: 10px auto;
     display: flex;
     flex-direction: column;
