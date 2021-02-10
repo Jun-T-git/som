@@ -1,7 +1,10 @@
 # SOMeL
 Self Organizing Map e-Learningの頭文字をとったSOMeL(染める)．
 
-機械学習手法の一つであるSOM（自己組織化マップ）を直感的に理解するためのデモプログラムである．
+機械学習手法の一つであるSOM（自己組織化マップ）を直感的に理解するためのデモプログラム．
+
+リンク
+https://jun-t-git.github.io/som/
 
 
 # Overview
